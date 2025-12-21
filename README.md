@@ -1,6 +1,12 @@
 
 ---
 
+## System Diagram
+
+![System Diagram](images/System_diagram.png)
+
+---
+
 ## Overview: LLM Tool Calling vs No Tool Calling
 
 ![LLM Tool Calling vs No Tool Calling](images/LLM_toolcalling_vs_notoolcalling.png)
