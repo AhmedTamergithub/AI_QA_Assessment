@@ -9,3 +9,7 @@ Siemens_Assessment.pdf
 code/summarization_agent/output/pdf_chunking_output.json
 code/summarization_agent/output/summarize_after_chunks.json
 code/summarization_agent/.adk/session.db
+code/Top_level/summarization_agent/resources/Ahmed_Tamer_Samir_CV.pdf
+code/Top_level/summarization_agent/resources/emptypdf.pdf
+code/Top_level/summarization_agent/resources/Imagepdfonly.pdf
+code/Top_level/summarization_agent/resources/zero_pages.pdf
