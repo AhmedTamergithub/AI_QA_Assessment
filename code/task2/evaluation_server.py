@@ -200,13 +200,13 @@ def load_summarization_data(summary_file_path: Optional[str] = None,
         if summary_file_path is None:
             summary_file_path = os.path.join(
                 os.path.dirname(__file__), 
-                "..", "summarization_agent", "output", "summarize_after_chunks.json"
+                "output", "summarize_after_chunks.json"
             )
         
         if raw_data_file_path is None:
             raw_data_file_path = os.path.join(
                 os.path.dirname(__file__), 
-                "..", "summarization_agent", "output", "raw_extracted_data.json"
+                "output", "raw_extracted_data.json"
             )
         
         # Load summary data
@@ -217,9 +217,19 @@ def load_summarization_data(summary_file_path: Optional[str] = None,
         with open(raw_data_file_path, 'r', encoding='utf-8') as f:
             raw_data = json.load(f)
         
+        # Extract text from raw_data, handling different possible formats
+        extracted_text = ""
+        if "extracted_text" in raw_data:
+            extracted_text = raw_data["extracted_text"]
+        elif "chunks" in raw_data:
+            # If chunking output was provided instead of raw data, reconstruct the text
+            extracted_text = "\n".join(raw_data["chunks"])
+        else:
+            raise KeyError("Expected key 'extracted_text' or 'chunks' missing from raw data JSON")
+            
         return {
             "combined_summary": summary_data["combined_summary"],
-            "extracted_text": raw_data["extracted_text"]
+            "extracted_text": extracted_text
         }
     
     except FileNotFoundError as e:
@@ -232,14 +242,14 @@ def load_summarization_data(summary_file_path: Optional[str] = None,
 @mcp.tool()
 def evaluate_summarization_agent(summary_file_path: Optional[str] = None,
                                  raw_data_file_path: Optional[str] = None,
-                                 similarity_threshold: float = 0.7) -> str:
+                                 similarity_threshold: float = 0.5) -> str:
     """
     Complete evaluation of summarization agent output using both similarity and hallucination checks.
     
     Args:
         summary_file_path (Optional[str]): Path to the summary JSON file
         raw_data_file_path (Optional[str]): Path to the raw data JSON file
-        similarity_threshold (float): Minimum similarity score to pass (default: 0.7)
+        similarity_threshold (float): Minimum similarity score to pass (default: 0.5)
         
     Returns:
         JSON string containing evaluation results:

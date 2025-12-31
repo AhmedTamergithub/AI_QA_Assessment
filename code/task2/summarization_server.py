@@ -403,6 +403,7 @@ def summarize_pdf(pdf_path: str) -> str:
         
         # Return result with file paths
         summarize_after_chunks["output_files"] = {
+            "raw_data": os.path.join(output_dir, "raw_extracted_data.json"),
             "chunking_output": chunking_output_file,
             "final_summary": final_summary_file
         }
