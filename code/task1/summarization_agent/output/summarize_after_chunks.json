@@ -1,0 +1,25 @@
+{
+  "pdf_path": "/home/ahmedubuntu/AI_EDA/code/task1/summarization_agent/resources/Ahmed_Tamer_Samir_CV.pdf",
+  "num_pages": 2,
+  "language": "en",
+  "total_characters": 5608,
+  "num_chunks": 2,
+  "chunking_method": "semantic_embeddings",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_summaries": [
+    {
+      "chunk_number": 1,
+      "chunk_length": 2865,
+      "summary": "Ahmed Tamer Samir is an Electronics and Electrical Communications Engineering student at Cairo University, graduating in 2025 with a cumulative grade of Very Good. He has practical experience in AI and Software Engineering through internships and projects.\n\nHis AI internship at TechnoWelle GmbH involved developing an Agentic AI system for automating Hardware-in-the-Loop (HIL) testing in automotive embedded systems. This project enhanced his skills in AI agents, LLMs, RAG, and prompt engineering. He also worked on his graduation project, sponsored by Si-Vision, focusing on deep learning systems, adversarial attacks, and defense techniques in computer vision and natural language processing, notably reducing the attack success rate on LLMs from 87% to 0% through an input filtering defense. Additionally, he has experience as a Full Stack Developer intern at LXT AI and has developed personal projects like an Arabic prompt engineer agent and an Arabic Q/A RAG system.",
+      "summary_length": 975
+    },
+    {
+      "chunk_number": 2,
+      "chunk_length": 2742,
+      "summary": "This document outlines a variety of technical projects and skills. Projects include implementing and testing the robustness of image classification models like EfficientNet against adversarial attacks, and developing a sentiment analysis NLP model that is also subjected to textual adversarial attacks. Additionally, there's a description of a DoorLocker security system utilizing an ATmega32 microcontroller and various peripherals, along with the implementation of STM32 drivers and microcontroller drivers for AVR ATmega32.\n\nFurther projects showcase hardware design and verification skills, including the design of an SPI slave wrapper, a Spartan6-DSP48A1, and a synchronous FIFO using Verilog HDL. A complete UVM environment for an SPI-Slave connected to a Dual-port RAM and ALSU unit was developed, and an Arithmetic Logic Shift Unit (ALSU) was designed in Verilog and implemented on an FPGA. The listed skills span Machine Learning, Natural Language Processing, Generative AI (including LLMs, AI agents, RAG, and fine-tuning), programming languages (C, C++, Python), hardware description languages (Verilog, System-Verilog), digital IC design and verification, web frameworks, databases, computer vision, deep learning frameworks, AI agent frameworks, LLM APIs, data structures, microcontroller interfacing, and various development tools.",
+      "summary_length": 1345
+    }
+  ],
+  "combined_summary": "Ahmed Tamer Samir is an Electrical Communications Engineering student at Cairo University with practical experience in AI and Software Engineering. His experience includes internships and projects involving agentic AI systems for automated testing, deep learning for computer vision and NLP with a focus on adversarial attacks, and full-stack development. He also possesses skills in various technical areas, including machine learning, NLP, generative AI, programming, hardware design and verification, and microcontroller interfacing.",
+  "timestamp": "2025-12-31T14:41:40.447617"
+}

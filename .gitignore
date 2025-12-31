@@ -19,3 +19,5 @@ code/Top_level/summarization_agent/output/pdf_chunking_output.json
 code/Top_level/summarization_agent/output/raw_extracted_data.json
 code/Top_level/summarization_agent/output/summarize_after_chunks.json
 task3/.venv_task3
+code/Top_level/Orchestator/.adk/session.db
+code/Top_level/Orchestator/.adk/session.db
