@@ -187,7 +187,7 @@ def summarize_text(text: str, max_length: str = "medium") -> str:
         max_retries = 3
         retry_delay = 30  # seconds
         summary = None
-        model_name = "gemini-2.5-flash-lite"
+        model_name = "gemini-3-flash-preview"
         
         for attempt in range(max_retries):
             try:
