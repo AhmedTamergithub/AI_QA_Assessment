@@ -6,6 +6,12 @@ Extracts the Applications section from Wikipedia AI article
 from playwright.sync_api import sync_playwright
 import json
 import asyncio
+import sys
+import os
+
+# Add the parent directory to sys.path to allow importing mcp_client
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from mcp_client import call_mcp_summarize
 
 

@@ -27,9 +27,15 @@ async def call_mcp_summarize(text):
     try:
         # Define server parameters for the MCP server
         import sys
+        import os
+        
+        # Get the absolute path to the server script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        server_script = os.path.join(script_dir, "summarization_server.py")
+        
         server_params = StdioServerParameters(
             command=sys.executable,  # Use the same Python interpreter
-            args=["summarization_server.py"],
+            args=[server_script],
             env=None
         )
         
