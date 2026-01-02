@@ -3,6 +3,7 @@
 ## Tasks Block Diagrams
 
 ### Task 1: Multi-Agent Orchestration
+[Task 1 README](code/task1/README.md)
 ![Task 1 System Diagram](images/task1_system_diagram.png)
 
 For Task 1, we developed a modular multi-agent system where each specific responsibility is handled by a dedicated agent. This architecture ensures clear separation of concerns:
