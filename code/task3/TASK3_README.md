@@ -73,7 +73,7 @@ Task 3 implements an MCP-based system for automated web content extraction and s
 
 1. Activate your virtual environment: `& venv\Scripts\Activate.ps1` (Windows)
 2. Install dependencies: `pip install -r task3_requirements.txt`
-3. Configure API key: Add your Gemini API key to the `code/task3/.env` file (Task 3 uses a separate environment file from the main project `.env` used in Tasks 1 and 2)
+3. Configure API key: Add your Gemini API key to the [`.env`](.env) file (Task 3 uses a separate environment file from the main project [`.env`](../../.env) used in Tasks 1 and 2)
 4. Navigate to test_scripts directory
 5. Run any test: `python test_baseline.py` (or `test_history.py`, `test_full_article.py`)
 
