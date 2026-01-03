@@ -81,8 +81,7 @@ The system consists of several specialized agents:
 
 
 
-4. Add your Gemini API key to the `.env` file:
- ![Environment Setup](../../images/gemini_api_key_pasting_place.PNG)
+4. Add your Gemini API key to the `.env` file
 
 ### Running the Entire Task 1 System
 1. Execute `configure_root.py` and select the orchestrator option.
