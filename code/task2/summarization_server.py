@@ -191,7 +191,8 @@ def summarize_text(text: str, max_length: str = "medium") -> str:
         
         for attempt in range(max_retries):
             try:
-                response = client.models.generate_content(
+                # Use streaming for real-time feedback in terminal
+                response = client.models.generate_content_stream(
                     model=model_name,
                     contents=user_prompt,
                     config={
@@ -199,7 +200,27 @@ def summarize_text(text: str, max_length: str = "medium") -> str:
                         'temperature': 0.7,
                     }
                 )
-                summary = response.text.strip()
+                
+                full_summary = []
+                sys.stderr.write("\n[STREAMING SUMMARY]: ")
+                sys.stderr.flush()
+                
+                for chunk in response:
+                    if chunk.text:
+                        text_chunk = chunk.text
+                        full_summary.append(text_chunk)
+                        
+                        # Print word by word for natural pacing
+                        words = text_chunk.split(' ')
+                        for i, word in enumerate(words):
+                            sys.stderr.write(word + (" " if i < len(words) - 1 else ""))
+                            sys.stderr.flush()
+                            time.sleep(0.05) # Slightly faster for MCP
+                
+                sys.stderr.write("\n[STREAMING COMPLETE]\n")
+                sys.stderr.flush()
+                
+                summary = "".join(full_summary).strip()
                 break  # Success, exit retry loop
                 
             except Exception as e:
