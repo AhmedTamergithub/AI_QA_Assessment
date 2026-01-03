@@ -1,5 +1,11 @@
 # AI EDA Project
 
+## Table of Contents
+- [Tasks Block Diagrams](#tasks-block-diagrams)
+  - [Task 1: Multi-Agent Orchestration](#task-1-multi-agent-orchestration)
+  - [Task 2: MCP-Based Architecture](#task-2-mcp-based-architecture)
+  - [Task 3: Automated Web Extraction & Summarization](#task-3-automated-web-extraction--summarization)
+
 ## Tasks Block Diagrams
 
 ### Task 1: Multi-Agent Orchestration
