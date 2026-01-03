@@ -72,7 +72,7 @@ The system consists of several specialized agents:
 1. Create virtual environment
 2. Install [requirements.txt](../../requirements.txt)
 
-### Configuration
+### API KEY Configuration
 1. Use the existing [`.env` file](../../.env)
 
 
